@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Slingshot : MonoBehaviour
 {
-
+    static public Slingshot S;
     public GameObject prefabProjectile;
     public bool _____________________________;
     public Vector3 launchPos;
@@ -14,6 +14,7 @@ public class Slingshot : MonoBehaviour
     public float velocityMult = 4f;
     void Awake()
     {
+        S = this;
         Transform launchPointTrans = transform.Find("LaunchPoint");
         launchPoint = launchPointTrans.gameObject;
         launchPoint.SetActive(false);
